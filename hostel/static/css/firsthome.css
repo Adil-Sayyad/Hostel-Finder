@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ 
+.bg {
+    background-image: url("/static/image/homepage.jpg");
+    width: 99vw;
+    height: 100vh; 
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center-box {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#hp {
+    font-size: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+#hm {
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-box a button {
+    font-size: 25px;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 25px;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.center-box a button:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: white;
+    color: blue;
+}
+.wrapper {
+    width: 99vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 80vh;
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: 1s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+input:checked + .card {
+    cursor: default;
+}
+
+.row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    margin-top: 240px;
+    font-size: 12px;
+}
+
+input:checked + label .row .icon {
+    background: rgb(0, 0, 0);
+    color: white;
+    width: 0px;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+    filter: opacity(80%);
+    justify-self: center;
+    align-self: center;
+    font-size: 130px;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 60vw;
+}
+
+.card[for="c1"] {
+    background-image: url('/static/image/pune2.jpg');
+}
+.card[for="c2"] {
+    background-image: url('/static/image/chennai2.jpg');
+}
+.card[for="c3"] {
+    background-image: url('/static/image/hyd2.jpeg');
+}
+.card[for="c4"] {
+    background-image: url('/static/image/delhi2.jpg');
+}
+
+.icon a {
+    text-decoration: none;
+    color: white;
+}

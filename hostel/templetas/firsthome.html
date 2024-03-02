@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+    <head>
+        <title>
+            Hostel Guru | Homepage
+        </title>
+        <link rel="stylesheet" href="static/css/firsthome.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="bg">
+            <div class="center-box">
+                <h1 id="hp" >HOSTEL GURU</h1>
+                <p id="hm">The Key To Your Second-Home</p>
+                <br><br><br> 
+                <a href="#explore">
+                    <button> 
+                        Start Exploring 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon"><a href="{% url 'pune' %}">PUNE</a></div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c2">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon"><a href="{% url 'Chennai' %}">CHENNAI</a></div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c3" >
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon"><a href="{% url 'Hyderabad' %}">HYDERABAD</a></div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c4" >
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon"><a href="{% url 'index' %}">DELHI</a></div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <a name="explore"></a>
+    </body>
+</html>

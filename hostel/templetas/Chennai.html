@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Guru</title>
+    
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="static/css/sytle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     
+</head>
+<body>
+  <!-- header -->
+   <!-- header -->
+   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <a class="img" href="{% url 'firsthome' %}"><img src="static/image/logo.png" height="100px"></a>
+
+    <ul class="nav col-12 col-md-auto justify-content-center menu">
+      <li><a href="Home" class="nav-link px-2 link-secondary ms-1 px-4">Home</a></li>
+      <li><a href="/#explore" class="nav-link px-2 link-dark ms-1 px-4">Change City</a></li>
+      <li><a href="faq" class="nav-link px-2 link-dark ms-1 px-4">FAQs</a></li>
+      <li><a href="about" class="nav-link px-2 link-dark ms-1 px-4">About</a></li>
+    </ul>
+    <div class="col-md-3 text-end px-4">
+    {% if user.is_authenticated %}
+      <a href="{% url 'user_logout' %}"><button type="button" class="btn btn-danger">Logout</button></a>
+    {% else %}
+     <a href="{% url 'login' %}"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
+     <a href="{% url 'Singup' %}"><button type="button" class="btn btn-primary me-2">Sign-up</button></a>
+    {% endif %}
+    </div>
+  </header>
+  <!-- header-end -->
+
+  <!-- main-content -->
+  <div class="row" style="width: 99vw;">
+      <div class="col-md-3 p-2">
+        <img src="static/image/chennai3.jpeg" class="sidebar" style="width: 100%; height: 100vh">
+      </div> 
+      <br>
+      <div class="col-md-9 bg-light p-4">
+        <h3>Top Hostel For Students in Chennai</h5>
+        <hr>
+        {% for i in hostel %}
+        <div class="card mb-9 p-3" >             
+          <div class="row g-0">
+            <div class="col-md-3">
+              <img src="{{ i.img1 }}" class="img-fluid rounded-start" style="height: 200px;">
+            </div>
+            <div class="col-md-9">
+              <div class="card-body hover-margin">
+                <h2 class="card-title">{{ i.Hname }}</h2>
+                <h5 class="card-title">{{ i.loc }}</h5>
+                <h6 class="card-text"> {{ i.gen }}</h6>
+                <p class="card-text">{{ i.addr }}</p>
+                <a href="detil{{ i.id }}" class="btn btn-primary">Seen More</a>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+        {% endfor %}
+      </div>
+  </div>
+  <!-- main-content-end -->
+
+  <!-- footer -->
+  <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="container p-4 pb-0">
+          <!-- Section: Form -->
+          <section class="">
+            <form action="{% url 'subscribe' %}" method="POST">
+              {% csrf_token %}
+              <div class="row d-flex justify-content-center">
+                <div class="col-auto">
+                  <p class="pt-2">
+                    <strong>Sign up for our newsletter</strong>
+                  </p>
+                </div>
+                <div class="col-md-5 col-12">
+                  <div class="form-outline mb-4">
+                    <input type="email" name="Semail" id="Semail" class="form-control" placeholder="Email Address">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </form>
+          </section>
+          <!-- Section: Form -->
+        </div>
+        <br>
+        <p class="col-md-4 mb-0 text-muted">© 2024 Hostel, Finder</p>
+    
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+          <img src="static/image/logo.png" height="80px">
+        </a>
+    
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="Home" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="faq" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="about" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+      </footer>
+  </div>
+  <!-- footer-end -->
+
+<script src="static/js/javascript.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src = "static/js/popper.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      
+</body>
+</html>

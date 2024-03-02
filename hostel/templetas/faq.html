@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="static/css/sytle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="bg-info ">
+        <div class="container text-center  ">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item text-danger fs-5"><a href="{% url 'Home' %}" class="text-decoration-none text-danger fw-bold ">Home</a></li>
+                    <li class="breadcrumb-item active fs-5" aria-current="page">FAQ</li>
+                    </ol>
+                </nav>
+                <div class="col align-self-center">
+                    <p class="fw-medium  p-5 " style="font-size: 50px;">Frequently Asked Questions</p>    
+                </div>
+        </div>
+    </div>
+    <div class="container-md border border-3 p-3">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Do I get to pick and choose the house amenities?
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">That would be ideal. But our co-living spaces are designed for everyone who’s residing in them at any given point of time. So it’s easier for us to maintain a standard package with the basic amenities available to all. But there are some additional value added services that you can opt in and out of them via our Stanza Living - Resident App, whenever you like.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    How can I book a room for myself?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">We like your enthusiasm, but we suggest visiting the residence you like before making the final decision. Till then, by paying just Rs.1000, you can ensure that you'll get priority access to the best rooms that are available.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Can I make a booking on behalf of another person?
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">If you're a close friend or a guardian, then sure. If you're just a random FB friend, then maybe not. Either way, at the time of booking, you’ll have to enter the details of the person who’ll be staying at the chosen Stanza Living residence. Once the booking is confirmed, he/she/they will have to meet the caretaker in person to carry out the KYC formalities before moving in.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Who will keep my room and the common areas clean?
+                  </button>
+                </h2>
+                <div id="flush-collapse" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">We have our own trained housekeeping team to keep our residences, including your room, spick, and span. Because your time is way too precious for cleaning your own room.
+
+                  </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Say I've paid for my room. What all do I get with it?
+                  </button>
+                </h2>
+                <div id="flush-collapse" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Besides fully furnished rooms, we provide a long list of amenities and services. But the exact offerings vary per residence. So it's best if you ask your sales advisor for the nitty-gritty.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Do I need to pay a deposit?
+                  </button>
+                </h2>
+                <div id="flush-collapse" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Yes, when you sign up with us. The deposit amount would vary anywhere between 1 - 2 months' rent depending on the property you choose.</div>
+                </div>
+            </div>
+            <!-- <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Is the security deposit mandatory?
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Yup, it sure is. The security deposit is a one-time fixed amount that we charge from you in addition to the monthly rent (which varies from property to property). And it’s fully refundable. So you get the full deposit credited right back to your bank account whenever you decide to move out. That is, if there are no legit reasons to make deductions against any damage or rent defaults on your end.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Can I share my single room with a friend?
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">As much as we’d like you to have company, we won’t be able to permit anyone to stay over at our residences without booking a room or prior document verification.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Can I bring over my friends and family?
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Generally, friends and visitors are not allowed. However there are a few exceptions. You can go through them all on the of our house rules and get a detailed understanding of the protocol you need to follow
+
+                  </div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+    
+    <br><br><br>
+
+ <!-- footer -->
+ <div class="container ">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="container p-4 pb-0">
+      <!-- Section: Form -->
+      <section class="">
+        <form action="{% url 'subscribe' %}" method="POST">
+          {% csrf_token %}
+          <div class="row d-flex justify-content-center">
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <div class="col-md-5 col-12">
+              <div class="form-outline mb-4">
+                <input type="email" name="Semail" id="Semail" class="form-control" placeholder="Email Address">
+              </div>
+            </div>
+            <div class="col-auto">
+              <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <!-- Section: Form -->
+    </div>
+    <br>
+    <p class="col-md-4 mb-0 text-muted">© 2024 Hostel, Finder</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img src="static/image/logo.png" height="80px">
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="Home" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="faq" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="about" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+  </footer>
+</div>
+ 
+
+
+
+
+      
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

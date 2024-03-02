@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .gradient-custom-2 {
+        background: #fccb90;
+
+        background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+        background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+        }
+
+        @media (min-width: 768px) {
+        .gradient-form {
+        height: 100vh !important;
+        }
+        }
+        @media (min-width: 769px) {
+        .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+        }
+}
+    </style>
+    <title>Hostel Guru | Login </title>
+
+</head>
+<body>
+    <section class="gradient-form" style="background-color: #eee;">
+        <div class="container py-4">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-xl-8">
+              <div class="card rounded-3 text-black">
+                <div class="row g-0">
+                  <div class="col-lg-6">
+                    <div class="card-body p-md-3 mx-md-4">
+      
+                      <div class="text-center">
+                        <img src="static/image/logo.png" style="width: 200px;" alt="logo">
+                      </div>
+                      <br><br><br>
+                      <form method="POST">
+                        <p>Please login to your account</p>
+                        {% csrf_token %}
+                        {% if errmsg %}
+                        <div class="alert alert-danger" role="alert">
+                           {{ errmsg }}
+                        </div>
+                        {% endif %}
+
+                        <div class="form-outline mb-3">
+                            <label class="form-label" for="form2Example11">Username:</label>
+                          <input type="email" name="name" id="Input1" class="form-control" placeholder="Email address" />
+                        </div>
+      
+                        <div class="form-outline mb-3">
+                            <label class="form-label" for="form2Example22">Password:</label>
+                          <input type="password" name="password" id="Input2" class="form-control" placeholder="Password"/>
+                        </div>
+      
+                        <div class="text-center pt-4 mb-3 pb-2">
+                          <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" style="width: 150px;" type="submit">Log in</button>
+                        </div>
+      
+                        <div class="d-flex align-items-center justify-content-center pb-4">
+                          <p class="mb-0 me-2">Don't have an account?</p>
+                          <a href="{% url 'Singup' %}" style="text-decoration: none;" class="btn btn-outline-danger">Create new</a>
+                        </div>
+      
+                      </form>
+      
+                    </div>
+                  </div>
+                  <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                      <h4 class="mb-4">Easily locate your perfect hostel with our user-friendly search interface</h4>
+                      <p class="small mb-0">We Are A Family!!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/popper.js"></script>
+</body>
+</html>

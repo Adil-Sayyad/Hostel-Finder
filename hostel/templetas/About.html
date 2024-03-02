@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/sytle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+    <br><br><br>
+    <div class="bg-info">
+    
+        <div class="container-md p-3">
+            <nav aria-label="breadcrumb ">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item text-danger fs-5"><a href="{% url 'Home' %}" class="text-decoration-none text-danger fw-bold ">Home</a></li>
+                <li class="breadcrumb-item active fs-5" aria-current="page">About</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <h1 class="col align-self-center ">About Us</h1>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-md d-inline-flex p-3" style="margin-left: 130px;">
+        <div class="col-md-6 text-xl-s ">
+            <p class=" fs-1 fw-bolder">Superior Hospitality<br>Limited</p>
+        </div>
+        <div class="col-md-6 text-xl-end fs-4">
+            <p class="lh-sm">An innovative and imaginative company aimed at becoming West Africa’s largest provider of student accommodation, offices & apartments. We view ourselves as partners with our customers, our employees and our community.</p>
+        </div>
+    </div>
+    <div class="container-md  p-4  d-inline-flex abmar " style="margin-left: 50px;">
+        <div class="col-md-4 " style="margin-left: 50px;">
+            <p class="text-danger fw-bolder " style="font-size: 50px;">67</p>
+            <p class="text-start"> Hostel situated in the Research & Institution area in the Jabi suburban district of Abuja.</p>
+        </div>
+        <div class="col-md-4 border-start border-2  " style="margin-left: 90px;">
+            <div style="margin-left: 50px;">
+                <p class="text-danger fw-bolder " style="font-size: 50px;">120+</p>
+                <p class="text-start lh-base fw-normal ">Residences housed with various living options for single or multi-resident rooms.</p>
+            </div>
+        </div>
+        <div class="col-md-3 border-start border-2"style="margin-left: 70px;">
+            <div style="margin-left: 50px;">   
+                <p class="text-danger fw-bolder " style="font-size: 50px;">95%</p>
+                <p class="text-start lh-base">Success rate in superior hospitality services.</p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="container-md border boder-2 d-inline-flex justify-content-between p-5 bg-primary" data-bs-theme="blue" style="margin-left: 100px; border-radius:30px">
+        <div class="col-md-5 ">
+            <h1 class="fw-bolder " style="font-size: 60px;"><p class="text-white">Quality</p> that speaks for itself</h1>
+        </div>
+        <div class="col-md-6  text-light">
+            <p class="text-end fs-4">Take it for granted that the lighting fixtures won't fail when you're tiptoeing 
+                to the dining area for a midnight snack. And we test our furniture for sturdiness,
+                 anticipating you slumping into it on certain days. But don't just go by our assurance. 
+                 See and experience it for yourself before giving your nod of approval.</p>
+        </div>
+    </div>
+    <br><br><br>
+ <!-- footer -->
+ <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="container p-4 pb-0">
+        <!-- Section: Form -->
+        <section class="">
+          <form action="{% url 'subscribe' %}" method="POST">
+            {% csrf_token %}
+            <div class="row d-flex justify-content-center">
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <div class="col-md-5 col-12">
+                <div class="form-outline mb-4">
+                  <input type="email" name="Semail" id="Semail" class="form-control" placeholder="Email Address">
+                </div>
+              </div>
+              <div class="col-auto">
+                <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+        <!-- Section: Form -->
+      </div>
+      <br>
+      <p class="col-md-4 mb-0 text-muted">© 2024 Hostel, Finder</p>
+  
+      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <img src="static/image/logo.jpg" height="80px">
+      </a>
+  
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="Home" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="faq" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="about" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
+    </footer>
+</div>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
